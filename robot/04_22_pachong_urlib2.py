@@ -9,6 +9,6 @@ headers = {'User-Agent': 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)',
            'Referer': 'http://www.dianping.com/articles'}
 data = urllib.urlencode(values)
 request = urllib2.Request(url, data, headers)
-response = urllib2.urlopen(request)
+response = urllib2.urlopen(request, data, 10)
 page = response.read()
 print page

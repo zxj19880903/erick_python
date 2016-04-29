@@ -10,7 +10,7 @@ filename = 'cookie.txt'
 cookie = cookielib.MozillaCookieJar(filename)
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookie))
 postdata = urllib.urlencode({'stuid': 'Jessica2', 'pwd': '802'})
-#登录教务系统的URL
+#登录系统的URL
 loginUrl = 'http://139.196.210.106:8080/'
 #模拟登录，并把cookie保存到变量
 result = opener.open(loginUrl, postdata)
